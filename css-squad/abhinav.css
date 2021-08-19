@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap");
+
+@font-face {
+  font-family: dharma;
+  src: url(../fonts/Mortend\ -\ Bold.otf);
+}
+@font-face {
+  font-family: dharma2;
+  src: url("../fonts/DharmaGothicE_Bold_R.otf");
+}
+@font-face {
+  font-family: Mortend - Light;
+  src: url("../fonts/Mortend\ -\ Light.ttf");
+}
+@font-face {
+  font-family: Akira;
+  src: url("../fonts/Akira\ Expanded\ Demo.otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 2px solid red; */
+}
+
+body {
+  background: #000;
+  color: white;
+  background-size: cover;
+  /* cursor: none; */
+}
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+  z-index: 99;
+  position: absolute;
+  pointer-events: none;
+  animation: cursorAnim 0.5s infinite alternate;
+}
+.cursor::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 8px solid rgb(255, 0, 0);
+  border-radius: 50%;
+  opacity: 0.5;
+  top: -10px;
+  left: -10px;
+  animation: cursorAnim2 0.5s infinite alternate;
+}
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+@keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.4);
+  }
+}
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+.expand {
+  animation: cursorAnim3 0.5s forwards;
+  border: 1px solid rgb(229, 255, 0);
+}
+.home {
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.9) url("img/Untitled-2\ 1.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  height: 100vh;
+}
+nav {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+.menu__items-link {
+  margin-left: 2rem;
+}
+
+.menu__logo a img {
+  width: 80%;
+}
+
+.menu__items {
+  display: flex;
+}
+
+.menu__items-link a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.container {
+  margin-top: 200px;
+  margin-left: 200px;
+}
+.container__item {
+  position: relative;
+  width: 540px;
+  height: 360px;
+  margin: 50px 500px 20px 80px;
+}
+
+.container__item-header h1 {
+  position: relative;
+  left: 40px;
+  width: 600px;
+  height: 360px;
+  font-family: "dharma", sans-serif;
+  font-size: 100px;
+}
+
+.container__item-title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container__item h1 {
+  position: absolute;
+  left: 40px;
+  bottom: -40px;
+  color: #fff;
+  font-family: "dharma", sans-serif;
+  font-size: 64px;
+}
+
+.container__item-1 {
+  background: url("img/Ellipse\ 4.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.container__item-2 {
+  background: url("img/Ellipse\ 2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.container__item-3 {
+  background: url("img/Ellipse\ 5.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 900px) {
+  .container__item {
+    width: 300px;
+    height: 200px;
+    margin: 50px 100px 20px 80px;
+  }
+  .container__item-header h1 {
+    font-size: 30px !important;
+    left: -50%;
+  }
+  .container__item h1 {
+    font-size: 40px;
+    bottom: -20px;
+  }
+}
+
+/* #js-scroll{
+    background: rgba(0, 0, 0, 0.9)url(img/banner-bg-ps.jpg);
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-size: cover;
+} */
+.project__container {
+  width: 70%;
+  margin: 120px auto;
+  color: #fff;
+  padding: 120px 40px;
+  text-align: center;
+}
+.project__container-title h1 {
+  color: #fff;
+  font-family: "dharma", sans-serif;
+  font-size: 120px;
+}
+.project__container-subtitle {
+  margin: 20px 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+.project__container-images {
+  padding: 40px 0;
+}
+.project-next-link {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-next-link a {
+  transition: 0.3s ease;
+}
+.project-next-link a:hover {
+  letter-spacing: 10px;
+}
+.project__container-images {
+  position: relative;
+  width: 100%;
+  /* height: 2000px; */
+  padding: 40px 0;
+}
+.brands {
+  margin-top: 100px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.brands .first {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.project-next-link a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "dharma", sans-serif;
+  font-size: 80px;
+  text-transform: uppercase;
+}
+.anime-js-title.letter {
+  display: inline-block;
+  line-height: 1em;
+}
+#img1 {
+  margin-right: 50px;
+}
+#img2 {
+  margin-right: 50px;
+}
+.socials a i {
+  color: #ffffff;
+  font-size: 34px;
+  margin: 5px;
+  transition: 0.3s ease;
+  margin-right: 20px;
+}
+.socials a i:hover {
+  transform: scale(1.2);
+}
+.socials .fa-spotify {
+  font-size: 30px;
+}
+@media screen and (max-width: 1024px) {
+  .project-next-link {
+    height: 250px;
+  }
+  .project__container-title h1 {
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .project-next-link {
+    height: 250px;
+  }
+  .project__container-title h1 {
+    font-size: 70px;
+  }
+  #img1 {
+    width: 50%;
+    margin-right: 50px;
+    margin-bottom: 0px;
+  }
+  #img2 {
+    width: 50%;
+  }
+  #img3 {
+    width: 50%;
+    margin-right: 0;
+  }
+  #img4 {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .project-next-link {
+    height: 200px;
+  }
+  #img1 {
+    width: 100%;
+    margin-right: 20px;
+    margin-bottom: 0px;
+  }
+  #img2 {
+    width: 100%;
+    margin-right: 0px;
+  }
+  #img3 {
+    width: 100%;
+    margin-right: 0;
+  }
+  .project__container-title h1 {
+    font-size: 40px;
+  }
+  .project__container {
+    width: 100%;
+  }
+  .project__container-images {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .project__container-images img {
+    width: 100%;
+  }
+  .project__container-images {
+    width: 100%;
+  }
+}
